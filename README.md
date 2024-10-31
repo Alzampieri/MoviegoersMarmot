@@ -16,5 +16,6 @@ Dropped for time shcedule :
 - search bar in Home page (left of language select box)
 - detail page for 'people'
 - more information in 'details page' (need more api call to fetch theses data)
+- responsive css
 
 Enjoy !
