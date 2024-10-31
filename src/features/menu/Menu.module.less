@@ -1,0 +1,63 @@
+@import '../../less/variables.less';
+
+.menu {
+    z-index: 2;
+    position: fixed;
+    width: @menu-width;
+    border-radius: 1rem;
+
+    left: @menu-padding-x;
+    top: @menu-padding-y;
+    bottom: @menu-padding-y;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    .link {
+        width: 5.8rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        border-radius: 0.8rem;
+
+        img {
+            width: 2.1rem;
+        }
+    }
+
+    .active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .profil {
+        position: absolute;
+        top: 3.5rem;
+
+        width: 5rem;
+        height: 5rem;
+
+        background: rgb(255, 188, 143);
+        border-radius: 50%;
+
+        img {
+            width: inherit;
+            height: inherit;
+
+            border-radius: inherit
+        }
+    }
+
+    .marmot {
+        position: fixed;
+        bottom: 0;
+        left: -1.5rem;
+        width: 15em
+    }
+}

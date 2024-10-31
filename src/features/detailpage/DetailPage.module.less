@@ -1,0 +1,75 @@
+@import '../../less/variables.less';
+
+.detailPage {
+    height: 100%;
+    width: 100%;
+}
+
+.detailPageContent {
+    height: 100%;
+    width: 100%;
+    padding-top: @bottom-of-topBar;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.detailPageBackground {
+    position: fixed;
+    top: 0;
+    left: @menu-padding-x;
+
+    width: 60%;
+    height: 60%;
+
+    background-size: cover;
+    background: linear-gradient(90deg, rgba(14, 6, 2, 0.7) 0%, rgba(89, 188, 185, 0) 100%);
+}
+
+.detailPageTextWrapper {
+    width: 100%;
+    margin-right: 7.2rem;
+    height: 55%;
+    display: flex;
+    justify-content: right;
+}
+
+.detailPageText {
+    width: 35%;
+    margin-right: 2rem;
+    display: flex;
+    gap: 1.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.detailPageTitle {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.detailPageDesc {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.detailPageData {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    text-align: left;
+    gap: 1.5rem;
+}
+
+.detailPageDataTitle {
+    width: 27%;
+    font-weight: bold;
+}
+
+.detailPageDatum {
+    display: flex;
+    width: 100%;
+}
+

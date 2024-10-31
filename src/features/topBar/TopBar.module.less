@@ -1,0 +1,57 @@
+@import '../../less/variables.less';
+
+.topBar {
+    z-index: 2;
+    top: 2.6rem;
+    position: fixed;
+
+    width: calc(100% - @left-of-menu - 2rem);
+    height: 4.8rem;
+
+    padding-left: @left-of-menu;
+    box-sizing: content-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    height: 100%;
+
+    font-size: 4rem;
+    font-weight: @extra-light;
+}
+
+.languageSelect, .returnButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 4.4rem;
+    height: 3.8rem;
+    border: none;
+    border-radius: .8rem;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    appearance: none;
+    text-align-last: center;
+
+    font-size: 1.4rem;
+    color: white;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    img {
+        height: 1rem;
+        width: 2rem;
+    }
+}
+
+.option {
+    appearance: none;
+    background-color: black;
+}

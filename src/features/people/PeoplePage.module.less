@@ -1,0 +1,27 @@
+@import '../../less/variables.less';
+
+.peopleContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 15.4rem);
+    grid-gap: 1.5rem;
+
+    max-height: 100%;
+    
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.people {
+    overflow: hidden;
+    padding-left: @left-of-menu;
+    padding-right: @menu-right-padding;
+    margin-top: @bottom-of-topBar;
+}
+
+.peopleItem {
+    img {
+        height: 23.1rem;
+        max-width: 15.4rem;
+        border-radius: 1rem;
+    }
+}
