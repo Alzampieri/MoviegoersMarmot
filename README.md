@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Create a Basic App with React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Get data from [themovieDB](https://www.themoviedb.org/) and create a simple yet modern UI.
 
-Currently, two official plugins are available:
+Feature :
+- home page with 3 strate tv shows/movie/people
+- 'category' pages for 'tv shows','movies' and 'people'
+- language support for content (no trad on text itself yet.)
+- detail page for 'tv shows' and 'movies' 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Placeholder (place made in UI): 
+- profil management
 
-## Expanding the ESLint configuration
+Dropped for time shcedule : 
+- support for translation (might add later)
+- search bar in Home page (left of language select box)
+- detail page for 'people'
+- more information in 'details page' (need more api call to fetch theses data)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Enjoy !

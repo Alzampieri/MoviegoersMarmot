@@ -37,6 +37,21 @@ function PeoplePage() {
     page,
   })
 
+    // triggered by change of Language, clean everything and start again.
+    useEffect(() => {
+      if (paginating.current) {
+        return;
+      }
+  
+      paginating.current = true;
+  
+      setToDisplay([])
+  
+      paginating.current = false;
+  
+      setPage(1)
+    }, [language])
+
   // used by Draggable child to signal to pull more data
   const onPaginationEvent = useCallback((event: React.ChangeEvent<HTMLSelectElement>)=> {
     if (isLoading || paginating.current) {
@@ -64,21 +79,6 @@ function PeoplePage() {
     paginating.current = false;
     return;
   }, [toDisplay])
-
-  // triggered by change of Language, clean everything and start again.
-  useEffect(() => {
-    if (paginating.current) {
-      return;
-    }
-
-    paginating.current = true;
-
-    setToDisplay([])
-
-    paginating.current = false;
-
-    setPage(1)
-  }, [language])
 
   const mutatedItem = useAddCompleteUrlToContents(toDisplay, 'profile_path', 'profile', 'w185');
 

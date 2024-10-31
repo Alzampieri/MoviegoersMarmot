@@ -53,7 +53,7 @@ function WatchablePage() {
     paginating.current = false;
 
     setPage(1)
-  }, [language, category])
+  }, [language])
 
   // used by Draggable child to signal to pull more data
   const onPaginationEvent = useCallback((event: React.ChangeEvent<HTMLSelectElement>)=> {
@@ -70,6 +70,12 @@ function WatchablePage() {
   useEffect(() => {
     const dataWatchableResults = dataWatchable?.results ?? [];
     setToDisplay((prevState) => {
+
+      // UGLY AS HELL, can't find another solution right now.
+      if (JSON.stringify(prevState) === JSON.stringify(dataWatchableResults)) {
+        return prevState;
+      }
+
       return [
         ...prevState,
         ...dataWatchableResults
@@ -89,8 +95,8 @@ function WatchablePage() {
     <Draggable rootClass={styles.watchablePage} vertical={true} paginationEvent={onPaginationEvent} childrenHeight={231} isLoading={isLoading}>
       <div className={styles.watchablePageContent}>
           {
-            mutatedItem.map((item: any) => (
-              <div className={styles.watchablePageItem} key={item.id}>
+            mutatedItem.map((item: any, index) => (
+              <div className={styles.watchablePageItem} key={`${item.id}_${index}`}>
                 <img draggable={false} src={item.image} />
               </div>
             ))

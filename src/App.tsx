@@ -3,7 +3,8 @@ import {
   BrowserRouter,
   Navigate,
   Route,
-  Routes
+  Routes,
+  useParams
 } from 'react-router-dom';
 
 import { persistor } from './configs/store';
@@ -17,6 +18,11 @@ import DetailPage from "@features/detailpage/DetailPage";
 
 import './App.less'
 
+const WatchablePageWrapper = () => {
+  const { category } = useParams();
+  return <WatchablePage key={category} />
+}
+
 function App() {
   return (
     <PersistGate loading={null} persistor={persistor}>
@@ -27,7 +33,7 @@ function App() {
           <Routes>
             <Route path='home' element={<Home />} />
             <Route path='category/people' element={<PeoplePage />} />
-            <Route path='category/:category' element={<WatchablePage />} />
+            <Route path='category/:category' element={<WatchablePageWrapper /> } />
             <Route path=':watchableType/:watchableId' element={<DetailPage />} />
             <Route path='' element={<Navigate to='home'/>} />
             <Route path='*' element={<Navigate to='home'/>} />

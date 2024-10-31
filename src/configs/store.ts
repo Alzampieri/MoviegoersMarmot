@@ -23,7 +23,7 @@ const reducer = combineReducers({
 });
 
 const persistConfig = {
-    key: 'oneDiscovery-test',
+    key: 'moviegoersmarmot',
     whitelist: [],
     storage,
 };
