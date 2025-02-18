@@ -88,7 +88,7 @@ function DetailPage() {
                     isGenericContentWithProductionCompany(mutatedItem) && mutatedItem.production_companies &&
                     <div className={styles.detailPageDatum}>
                       <div className={styles.detailPageDataTitle}>Production</div>
-                      <div>{ mutatedItem.production_companies.map((company) => company.name).join(', ') }</div>
+                      <div className={styles.detailPageDataProduction}>{ mutatedItem.production_companies.map((company) => company.name).join(', ') }</div>
                     </div>
                   }
                 </div>
