@@ -94,7 +94,10 @@ function DetailPage() {
                 </div>
               </div>
             </div>
-            <Slider title='Suggestions' itemType={watchableType} link={`/category/${watchableType}`} items={dataSimilarResults} pictureData={movieAndTvPictureData}/>
+            {
+              dataSimilarResults.length > 0 &&
+              <Slider title='Suggestions' itemType={watchableType} link={`/category/${watchableType}`} items={dataSimilarResults} pictureData={movieAndTvPictureData}/>
+             }
           </div>
         </div>
       }
