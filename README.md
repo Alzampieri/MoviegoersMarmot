@@ -17,5 +17,6 @@ Dropped for time shcedule :
 - detail page for 'people'
 - more information in 'details page' (need more api call to fetch theses data)
 - responsive css
+- breadcrumbs
 
 Enjoy !

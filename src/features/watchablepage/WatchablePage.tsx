@@ -21,9 +21,11 @@ import { Content, ContentType, ContentWithImage } from '@types/contents.type'
 import Draggable from '@components/draggable/Draggable'
 
 import styles from './WatchablePage.module.less'
+import Watchable from '@components/content/Watchable'
 
 interface WatchablePageParameters {
-  category?: ContentType
+  category: ContentType,
+  [key: string]: unknown
 }
 
 function WatchablePage() {
@@ -32,7 +34,7 @@ function WatchablePage() {
   const paginating = useRef(false)
 
   const language = useSelector(selectLanguage)
-  let { category } = useParams() as WatchablePageParameters;
+  let { category }  = useParams() as WatchablePageParameters;
 
   const { data: dataWatchable, isLoading } = useDiscoverQuery<TvShowsDiscoverResponse>({
     language,
@@ -96,9 +98,7 @@ function WatchablePage() {
       <div className={styles.watchablePageContent}>
           {
             mutatedItem.map((item: any, index) => (
-              <div className={styles.watchablePageItem} key={`${item.id}_${index}`}>
-                <img draggable={false} src={item.image} />
-              </div>
+              <Watchable className={styles.watchablePageItem} item={item} itemType={category} key={item.id}/>
             ))
           }
         </div>
